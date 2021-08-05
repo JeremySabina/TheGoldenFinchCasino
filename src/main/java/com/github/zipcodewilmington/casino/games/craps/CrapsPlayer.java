@@ -17,10 +17,6 @@ public class CrapsPlayer implements GamblingPlayer {
         return null;
     }
 
-    @Override
-    public <SomeReturnType> SomeReturnType play() {
-        return null;
-    }
 
 
     @Override

@@ -1,13 +1,12 @@
 
-package com.github.zipcodewilmington.casino.games.cards;
-import com.github.zipcodewilmington.casino.GambleableGame;
+package com.github.zipcodewilmington.casino.games.blackjack;
+import com.github.zipcodewilmington.casino.GameInterface;
 import com.github.zipcodewilmington.casino.PlayerInterface;
 import com.github.zipcodewilmington.casino.objects.Card;
 import com.github.zipcodewilmington.casino.objects.Deck;
 import com.github.zipcodewilmington.utils.AnsiColor;
 import com.github.zipcodewilmington.utils.IOConsole;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -21,7 +20,7 @@ import java.util.Locale;
 // if the player HOLDs and their total is higher than the dealer, then they win
 // if the player gets exactly 21 they win 2x the total bet
 
-public class BlackjackGame implements GambleableGame {
+public class BlackjackGame implements GameInterface {
 
     String playerInput;
     ArrayList<Card> hand;
@@ -39,7 +38,7 @@ public class BlackjackGame implements GambleableGame {
 
     public BlackjackGame() {
         this.deck = new Deck(1);
-        this.hand = new ArrayList<Card>();
+        this.hand = new ArrayList<>();
 
     }
 
@@ -67,7 +66,7 @@ public class BlackjackGame implements GambleableGame {
 
         playerInput = console.getStringInput("What would you like to do? \n [HIT] [STAY]");
 
-        if(playerInput == "hit".toLowerCase(Locale.ROOT)){
+        if(playerInput.equals("hit".toLowerCase(Locale.ROOT))){
             hand.add(deck.dealCard());
 
             int handValue = (deck.cardValue(hand.get(0)) + deck.cardValue(hand.get(1)));
@@ -78,7 +77,7 @@ public class BlackjackGame implements GambleableGame {
 
             }
 
-        } else if(playerInput == "stay".toLowerCase(Locale.ROOT)) {
+        } else if(playerInput.equals("stay".toLowerCase(Locale.ROOT))) {
             System.out.println("Dealer's turn.");
         }
 

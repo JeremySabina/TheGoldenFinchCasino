@@ -1,9 +1,6 @@
-package com.github.zipcodewilmington.casino.games.cards;
+package com.github.zipcodewilmington.casino.games.texasholdem;
 
-import com.github.zipcodewilmington.casino.CasinoAccount;
-import com.github.zipcodewilmington.casino.GambleableGame;
-import com.github.zipcodewilmington.casino.GamblingPlayer;
-import com.github.zipcodewilmington.casino.PlayerInterface;
+import com.github.zipcodewilmington.casino.*;
 import com.github.zipcodewilmington.casino.objects.Deck;
 
 
@@ -16,8 +13,7 @@ import com.github.zipcodewilmington.casino.objects.Deck;
 // Dealer reveals the Turn - (fourth community card revealed)
 // Play loops through
 
-public class TexasHoldEmGame implements GambleableGame, GamblingPlayer {
-
+public class TexasHoldEmGame implements GamblingPlayer, GameInterface {
 
 
     Deck deck;
@@ -95,9 +91,5 @@ public class TexasHoldEmGame implements GambleableGame, GamblingPlayer {
     public CasinoAccount getArcadeAccount() {
         return null;
     }
-
-    @Override
-    public <SomeReturnType> SomeReturnType play() {
-        return null;
-    }
 }
+

@@ -1,6 +1,6 @@
 
 package com.github.zipcodewilmington.casino.games.roulette;
-import com.github.zipcodewilmington.casino.GambleableGame;
+import com.github.zipcodewilmington.casino.GameInterface;
 import com.github.zipcodewilmington.casino.PlayerInterface;
 
 
@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 
 
-public class RouletteGame implements GambleableGame {
+public class RouletteGame implements GameInterface {
 
 
     String gameName;
@@ -31,7 +31,7 @@ public class RouletteGame implements GambleableGame {
     private final IOConsole console = new IOConsole(AnsiColor.YELLOW);
 
 
-    public RouletteGame(String gameName, RoulettePlayer player, Wheel wheel) {
+    public RouletteGame(String gameName, RoulettePlayer player) {
         this.gameName = gameName;
         this.player = player;
         this.wheel = new Wheel();

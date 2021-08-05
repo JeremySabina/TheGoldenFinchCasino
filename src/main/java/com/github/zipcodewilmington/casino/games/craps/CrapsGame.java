@@ -1,14 +1,10 @@
 package com.github.zipcodewilmington.casino.games.craps;
 
-import com.github.zipcodewilmington.casino.GambleableGame;
+import com.github.zipcodewilmington.casino.GameInterface;
 import com.github.zipcodewilmington.casino.PlayerInterface;
 
-import java.util.Scanner;
-
-import static com.github.zipcodewilmington.casino.objects.Dice.roll;
-
 //GambleableGame and GamblingPlayer
-public class CrapsGame implements GambleableGame {
+public class CrapsGame implements GameInterface {
 
 
 

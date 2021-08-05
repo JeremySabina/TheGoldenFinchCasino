@@ -1,9 +1,9 @@
 package com.github.zipcodewilmington;
 import com.github.zipcodewilmington.casino.*;
-import com.github.zipcodewilmington.casino.games.cards.BlackjackGame;
-import com.github.zipcodewilmington.casino.games.cards.BlackjackPlayer;
-import com.github.zipcodewilmington.casino.games.cards.TexasHoldEmGame;
-import com.github.zipcodewilmington.casino.games.cards.TexasHoldEmPlayer;
+import com.github.zipcodewilmington.casino.games.blackjack.BlackjackGame;
+import com.github.zipcodewilmington.casino.games.blackjack.BlackjackPlayer;
+import com.github.zipcodewilmington.casino.games.texasholdem.TexasHoldEmGame;
+import com.github.zipcodewilmington.casino.games.texasholdem.TexasHoldEmPlayer;
 import com.github.zipcodewilmington.casino.games.craps.CrapsGame;
 
 
@@ -77,7 +77,7 @@ public class Casino implements Runnable {
     private String getArcadeDashboardInput() {
         return console.getStringInput(new StringBuilder()
                 .append("Welcome to the Arcade Dashboard!")
-=
+
                 .append(  "~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~~*~*~*~\n"
                         + "~*~*~                                      ~*~*~\n"
                         + " $$$   WELCOME TO THE GOLDEN FINCH CASINO  $$$ \n"

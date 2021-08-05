@@ -5,7 +5,6 @@ package com.github.zipcodewilmington.casino.games.roulette;
 import com.github.zipcodewilmington.casino.CasinoAccount;
 import com.github.zipcodewilmington.casino.GamblingPlayer;
 import com.github.zipcodewilmington.casino.Player;
-import com.github.zipcodewilmington.casino.objects.RouletteBet;
 
 
 public class RoulettePlayer implements GamblingPlayer {
@@ -20,11 +19,6 @@ public class RoulettePlayer implements GamblingPlayer {
 
     @Override
     public CasinoAccount getArcadeAccount() {
-        return null;
-    }
-
-    @Override
-    public <SomeReturnType> SomeReturnType play() {
         return null;
     }
 

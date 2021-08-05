@@ -1,8 +1,5 @@
 package com.github.zipcodewilmington.casino;
 
-import java.util.List;
-import java.util.Map;
-
 /**
  * Created by leon on 7/21/2020.
  * `ArcadeAccount` is registered for each user of the `Arcade`.
@@ -10,45 +7,33 @@ import java.util.Map;
  */
 public class CasinoAccount {
     String accountName;
-    String AccountPassword;
+    String password;
     String house;
-    float balance;
+    Float accountBalance;
 
 
 
-    public CasinoAccount(String accountName, String getAccountPassword) {
+    public CasinoAccount(String accountName, String accountPassword) {
         this.accountName = accountName;
-        this.AccountPassword = getAccountPassword;
-
+        this.password = accountPassword;
     }
 
-    public CasinoAccount(String accountName, String accountPassword, float balance) {
-        this.accountName = accountName;
-        AccountPassword = accountPassword;
-        this.balance = balance;
-    }
+    // Getters
 
     public String getAccountName() {
         return accountName;
     }
 
-    public void setAccountName(String accountName) {
-        this.accountName = accountName;
+    public String getPassword() {
+        return password;
     }
 
-    public String getAccountPassword() {
-        return AccountPassword;
+    public Float getAccountBalance() {
+        return accountBalance;
     }
 
-    public void setAccountPassword(String accountPassword) {
-        AccountPassword = accountPassword;
+    public void alterAccountBalance(Float value) {
+        this.accountBalance += value;
     }
 
-    public float getBalance() {
-        return balance;
-    }
-
-    public void setBalance(float balance) {
-        this.balance = balance;
-    }
 }

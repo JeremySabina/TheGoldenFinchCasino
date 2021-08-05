@@ -1,6 +1,6 @@
 package com.github.zipcodewilmington.casino.games.craps;
 
-import com.github.zipcodewilmington.casino.GambleableGame;
+import com.github.zipcodewilmington.casino.GameInterface;
 import com.github.zipcodewilmington.casino.PlayerInterface;
 
 import com.github.zipcodewilmington.utils.AnsiColor;
@@ -9,7 +9,7 @@ import com.github.zipcodewilmington.utils.IOConsole;
 
 import static com.github.zipcodewilmington.casino.objects.Dice.roll;
 
-public class CrapsTable implements GambleableGame {
+public class CrapsTable implements GameInterface {
 
     private final IOConsole console = new IOConsole(AnsiColor.CYAN);
 
